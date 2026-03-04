@@ -1,6 +1,7 @@
 package ie.atu.week2lab.oop_inclass_07.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
@@ -19,7 +20,7 @@ public class Booking {
     @NotBlank(message = "Booking Tag is required.")
     private String bookingTag;
 
-    @studentEmail(message = "Student Email is not valid.")
+    @Email(message = "Student Email is not valid.")
     private String studentEmail;
 
     @NotBlank (message = "Booking Date is required.")
